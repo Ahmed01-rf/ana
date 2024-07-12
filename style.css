@@ -1,0 +1,277 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
+*{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family:'Space Grotesk',sans-serif ;
+      
+}
+ 
+ body {
+    background-color: #faf7ef;
+    height: 100vh;
+    background-size: cover;
+    height: 1000px;
+}
+
+ 
+.slide{
+    height: 100%;
+    width: 180px;
+    position:absolute;
+    background-color: #faf7ef;
+    transition: 0,5s ease ;
+    transform: translateX(-180px);
+} 
+
+h1{
+    color: #5f8e36;
+    font-weight: 800;
+    text-align: right;
+    padding: 10px 0;  
+    padding-right: 30px;
+    pointer-events: none;
+    margin-right: auto;
+}
+ul li{
+    list-style: none;
+}
+ul li a{
+    color: #000;
+    font-weight: 200;
+    padding: 5px 0;
+    display:block;
+    text-transform: capitalize; 
+    text-decoration: none;
+    transition: 0,2s ease-out;
+}
+ul li:hover a{
+    color: #ffffff;
+    background-color: #5f8e36;
+}
+
+ul li a i {
+    width: 40px;
+    text-align: center;
+}
+input{
+    display: none;
+    visibility: hidden;
+    -webkit-appearance: none;
+}
+.toggle{
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    top: 15px;
+    left: 10px;
+    z-index:1 ;
+    cursor: pointer;
+    border-radius: 2px;
+    background-color: #faf7ef;
+    box-shadow: 0 0 10px black ;
+}
+.toggle .common{
+    position: absolute;
+    height: 2px;
+    width: 20px;
+    background-color:#5f8e36;
+    border-radius: 50px;
+    transition: 0,3s ease;
+}
+.toggle .top_line{
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.toggle .middle_line{
+    top: 50%;
+    right:  5%;
+    transform: translate(-50%,-50%);
+}
+.toggle .bottom_line{
+    top: 70%;
+    left: 50% ;
+    transform: translate(-50%,-50%);
+}
+input:checked ~ .toggle .top_line{
+    left: 10px;
+    top: 14px;
+    width: 25px;
+    transform: rotate(45deg);
+}
+input:checked ~ .toggle .bottom_line{
+    left: 2px;
+    top: 14px;
+    width: 25px;
+    transform: rotate(-45deg);
+} 
+input:checked ~ .toggle .middle_line{
+    opacity: 0;
+    transform: translate(20px);
+}
+input:checked ~ .slide{
+    transform: translateX(0);
+    box-shadow: 0 0 15px #000;
+
+}
+
+.logo{
+   
+    height: 100px;
+    display: flex;
+    
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.logo img {
+    
+    height: 80px;
+    border-radius: 50%;
+    width: 80px;
+}
+.logo p{
+    padding: 10px;
+    text-align: center;
+    color: #5f8e36;
+   font-size: 30px;
+}
+
+#top {
+    height: 500px;
+    width: 100%;
+    background-image: url(image/background.jpg);
+    background-size: cover;
+}
+ #middle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 650px;
+    width: 100%;
+    background-color: #ffffff;
+}
+ #bottom{
+height: 500px;
+width: 100%;
+
+background-color: brown;
+}
+.cercle_image_text{
+    display: flex;
+    justify-content: space-around;
+}
+.textright , .textleft{
+    display:flex;
+    /* width: auto; */
+    flex-direction: column;
+    justify-content: space-evenly;
+    font-size: 28px;
+    color: #5f8e36;
+}
+.wrapper{
+    height: 48%;
+    width: 48%;
+    /* background-size: cover; */
+}
+.top-left{
+    border-top-left-radius: 100%;
+    background-image: url(image/monocp.jpg);
+    
+}
+.top-right{
+    border-top-right-radius: 100%;
+    background-image: url(image/décoty.jpg);
+}
+.bottom-left{
+    border-bottom-left-radius: 100%;
+    background-image:url(image/mauvaise\ herbe.jpg);
+}
+.bottom-right{
+    border-bottom-right-radius: 100%;
+    background-image: url(image/advantc.jpg);
+}
+.container{
+    display: flex;
+    width: 500px;
+    justify-content: space-around;
+    align-items: center;
+    height: 500px;
+    flex-wrap: wrap;
+    gap: 0px;
+}
+
+.definition-cercle{
+    height: 400px;
+    background-size: cover;
+    width: 400px;
+    
+    
+}
+.cercle1 {
+    border-top-left-radius: 100%;
+    background-image: url(image/1280px-Crocus_vernus.jpg);
+    
+}
+
+.cercle2 {
+    border-top-right-radius: 100%;
+    background-image: url(image/décoty1.webp);
+}
+.cercle3 {
+    border-bottom-left-radius: 100%;
+    background-image: url(image/mauvais\ herbees.jpg);
+}
+.cercle4 {
+    border-bottom-right-radius: 100%;
+    background-image: url(image/les\ adventices.jpg);
+
+}
+#definitions{
+
+    background-color: #faf7ef;
+}
+.def-element{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+.def-element div{
+    flex-basis: 50%;
+    padding: 2Opx;
+    margin: 50px;
+}
+#diff{
+    width: 100%;
+    height:800px ;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.image_diff{
+    width: 80%;
+    
+    
+}
+.content-title {
+    font-size: 50px;
+    text-align:center ;
+    margin-left: 420PX;
+    color: #ffffff;
+}
+.para {
+    font-size: 35px;
+    padding: 25px;
+    color: rgb(0, 0, 0);
+}
+h2{
+    color: #5f8e36;
+}
+.paragraphe1 {
+    font-size: 20px;
+   width: 50%;
+} 
